@@ -8,6 +8,7 @@ const morgan = require('morgan');
 const session = require('express-session');
 
 const authController = require('./controllers/auth.js');
+ const  blogController = require('./controllers/blogapp.js');   
 
 const port = process.env.PORT ? process.env.PORT : '3000';
 
