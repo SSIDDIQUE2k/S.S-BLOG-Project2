@@ -38,10 +38,10 @@ router.post('/sign-up', async (req, res) => {
     // All ready to create the new user!
     await User.create(req.body);
   
-    res.redirect('/auth/sign-in');
+    res.redirect('/');
   } catch (error) {
     console.log(error);
-    res.redirect('/');
+    res.redirect('/views/index.ejs');
   }
 });
 

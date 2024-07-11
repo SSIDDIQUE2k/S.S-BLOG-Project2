@@ -1,5 +1,10 @@
 const mongoose = require('mongoose');
 
+const blogSchema = mongoose.Schema ({
+  title: String,
+  content: String,
+});
+
 const userSchema = mongoose.Schema({
   username: {
     type: String,
@@ -9,6 +14,7 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  blogs: [blogSchema],
 });
 
 const User = mongoose.model('User', userSchema);
