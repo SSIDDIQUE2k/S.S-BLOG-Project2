@@ -8,16 +8,13 @@
 <body>
     <%- include('../partials/navbar.ejs') %>  
     <h1>Welcome to the app </h1>
-    <form action=" /users/<%= user._id %>/" method="POST">
+    <form action=" /users/<%= user._id %>/blogapp" method="POST">
 
     
-        <label for="company">Notes:</label>
-        <textarea name="text" name="notes" id="notes"></textarea>
-    
-       
+        <label for="notes">Notes:</label>
+        <textarea type="text" name="title" id="notes"></textarea>
     
             <button type="submit">Add App</button>
-        </form> 
 
     
 </body>

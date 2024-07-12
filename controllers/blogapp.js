@@ -12,6 +12,17 @@ router.get('/' , (req, res) => {
     }
 } );
 
-
+router.post('/' , async (req, res) => {
+try {
+    const currentUser = await User.findById(req.session.user._id);
+    currentUser.blogs.push(req.body);
+    console.log(req.body);
+    currentUser.save();
+    res.redirect(`/users/${currentUser._id}/blogapp`);
+} catch (error) {
+    console.log(error);
+    res.redirect('/');
+}
+} );
 
 module.exports = router;
