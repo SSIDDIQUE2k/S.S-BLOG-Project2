@@ -2,10 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <%- include('../partials/navbar.ejs') %>  
+    <h1>Welcome to the app </h1>
+    <form action=" /users/<%= user._id %>/" method="POST">
+
+    
+        <label for="company">Notes:</label>
+        <textarea name="text" name="notes" id="notes"></textarea>
+    
+       
+    
+            <button type="submit">Add App</button>
+        </form> 
+
     
 </body>
 </html>
