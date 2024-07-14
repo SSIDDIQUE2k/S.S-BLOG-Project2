@@ -2,9 +2,8 @@ const mongoose = require('mongoose');
 
 const blogSchema = mongoose.Schema ({
   title: String,
-  content: String,
+  notes: String,
 });
-
 const userSchema = mongoose.Schema({
   username: {
     type: String,

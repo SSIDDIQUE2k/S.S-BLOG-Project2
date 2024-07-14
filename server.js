@@ -12,7 +12,7 @@ const isGuest = require('./middleware/is-guest.js');
 const passToView = require('./middleware/pass-user-to-view.js');
 
 const authController = require('./controllers/auth.js');
- const  blogController = require('./controllers/blogapp.js');   
+ const  blogController = require('./controllers/blogApp.js');   
 
 const port = process.env.PORT ? process.env.PORT : '3000';
 
@@ -38,7 +38,8 @@ app.use(passToView);
 
 app.get('/', (req, res) => {
   if (req.session.user) {
-  res.redirect(`/users/${req.session.user._id}/blogapp`);
+  res.redirect(`/users/${req.session.user._id}/blogApp`);
+  console.log("nate:", req.session.user._id)
   }else{
     res.render('index.ejs') 
   }
@@ -51,7 +52,7 @@ app.get('/', (req, res) => {
 app.use('/auth', authController);
 
 app.use(isSignedIn);
-app.use('/users/:userId/blogapp', blogController);
+app.use('/users/:userId/blogApp', blogController);
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
