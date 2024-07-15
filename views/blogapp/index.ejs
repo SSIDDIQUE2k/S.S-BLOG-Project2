@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 <body>
     <%- include('../partials/navbar.ejs') %>  
@@ -29,19 +30,36 @@
         >
             <button type="submit">Delete this post</button>
     </form>
-    <p>Edit <%= blog.title %> </p>
-    <form action="/users/<%= user._id %>/blogApp/<%= blog._id %>?_method=PUT" method="POST">
-        <label for="title">Title:</label>
-        <input type="text" name="title" id="title" value="<%= blog.title %>">
-    
-        <label for="notes">Notes:</label>
-        <textarea name="notes" id="notes"><%= blog.notes %></textarea>
-    
-        <button type="submit">Update blog</button>
-    </form>
-    
 
+    <p>Edit <%= blog.title %> </p>
+    <div class="edit-form" id="editForm">
+        <form action="/users/<%= user._id %>/blogApp/<%= blog._id %>?_method=PUT" method="POST">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" value="<%= blog.title %>">
+        
+            <label for="notes">Notes:</label>
+            <textarea name="notes" id="notes"><%= blog.notes %></textarea>
+         
+            <button type="submit">Update Blog</button>
+        </form>
+    </div>
+
+    <button class="edit-button" id="editButton">Edit</button>
+
+    <!-- Optional: Script to toggle visibility of edit form -->
+    <script>
+        document.getElementById('editButton').addEventListener('click', function() {
+            var form = document.getElementById('editForm');
+            if (form.style.display === 'none' || form.style.display === '') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        });
+    </script>
         <% }) %>
+
+
     
 </body>
 </html>
