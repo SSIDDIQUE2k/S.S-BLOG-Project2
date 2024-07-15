@@ -26,15 +26,6 @@ form label {
     font-weight: bold;
 }
 
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: vertical;
-}
-
 form button {
     background-color: #007bff;
     color: #fff;
@@ -79,6 +70,7 @@ form button:hover {
 .edit-form label,
 .edit-form textarea {
     display: block;
+    
     margin-bottom: 10px;
 }
 
