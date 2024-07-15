@@ -24,9 +24,10 @@ h1 {
     width: 100%;
 }
 
-p, p1 {
-    color: #999;
+p {
+    color: black;
     text-align: center;
+    font-weight: bold;
 }
 
 .outer-container {
