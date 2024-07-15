@@ -27,7 +27,6 @@
             <button type="submit">Delete this post</button>
         </form>
 
-        <p>Edit <%= blog.title %></p>
         <div class="edit-form" id="editForm-<%= index %>" style="display: none;">
             <form action="/users/<%= user._id %>/blogApp/<%= blog._id %>?_method=PUT" method="POST">
                 <label for="title-<%= index %>">Title:</label>
