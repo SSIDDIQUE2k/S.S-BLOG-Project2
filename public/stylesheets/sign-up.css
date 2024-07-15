@@ -1,13 +1,19 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url('https://media.istockphoto.com/id/1403057774/vector/gradient-background-orange-pink-and-purple-colors-rainbow-colors-magenta-yellow-and-red.jpg?s=612x612&w=0&k=20&c=vjBJxXPU7QXTUgGcMYVq-4xp7W7ns4wkjf42pDVK2K0=');
-    background-size: cover; /* Ensure the image covers the entire background */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -18,6 +24,8 @@ form {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
 }
 
 form label {
@@ -26,11 +34,19 @@ form label {
     font-weight: bold;
 }
 
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 form button {
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 30px;
     cursor: pointer;
     border-radius: 5px;
 }
@@ -39,75 +55,6 @@ form button:hover {
     background-color: #0056b3;
 }
 
-.blog-post {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: relative; /* Ensure position relative for absolute positioning */
-}
-
-.blog-post h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.blog-post p {
-    line-height: 1.6;
-}
-
-.blog-post form {
-    margin-top: 10px;
-}
-
-.edit-form {
-    display: none;
-    margin-top: 10px;
-}
-
-.edit-form label,
-.edit-form textarea {
-    display: block;
-    
-    margin-bottom: 10px;
-}
-
-.edit-form input,
-.edit-form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.edit-form button {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.edit-form button:hover {
-    background-color: #218838;
-}
-
-.edit-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.edit-button:hover {
-    background-color: #0056b3;
+#confirmPassword {
+    padding-left: 9px; /* Shift the confirm password input a bit to the right */
 }
