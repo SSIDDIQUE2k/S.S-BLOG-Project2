@@ -53,13 +53,13 @@ p {
     margin-top: 20px;
 }
 
-button, input[type="text"], input[type="password"] {
+/* button, input[type="text"], input[type="password"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #dbdbdb;
     border-radius: 5px;
-}
+} */
 
 button {
     background-color: #3897f0;
@@ -73,14 +73,6 @@ button:hover {
     background-color: #318ce7;
 }
 
-input[type="text"], input[type="password"] {
-    background-color: #fafafa;
-}
-
-input[type="text"]:focus, input[type="password"]:focus {
-    border: 1px solid #a8a8a8;
-    outline: none;
-}
 
 .sign-up-btn {
     background-color: #fff;
@@ -97,20 +89,6 @@ input[type="text"]:focus, input[type="password"]:focus {
     align-items: center;
     text-align: center;
     margin: 20px 0;
-}
-
-.separator::before, .separator::after {
-    content: '';
-    flex: 1;
-    border-bottom: 1px solid #dbdbdb;
-}
-
-.separator:not(:empty)::before {
-    margin-right: .25em;
-}
-
-.separator:not(:empty)::after {
-    margin-left: .25em;
 }
 
 .or {
