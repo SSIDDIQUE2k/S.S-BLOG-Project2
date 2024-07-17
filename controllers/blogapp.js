@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
     try {
         const CurrentUser = await User.findById(req.session.user._id);
         
-        res.render('blogApp/index.ejs', {
+        res.render('blogapp/index.ejs', {
             blogApp: CurrentUser.blogs,
         });
     } catch (error) {
@@ -35,7 +35,7 @@ router.get('/:blogAppId', async (req, res) => {
         const currentUser = await User.findById(req.session.user._id);
         const blogApp = currentUser.blogs.id(req.params.blogAppId);
 
-        res.render('blogApp/blog.ejs', {
+        res.render('blogapp/blog.ejs', {
             blogApp: blogApp,
         });
 
@@ -45,18 +45,18 @@ router.get('/:blogAppId', async (req, res) => {
     }
 } );
 
-router.get('/:blogAppId/edit', async (req, res) => {
-    try {
-      const currentUser = await User.findById(req.session.user._id);
-      const blogApp = currentUser.blogs.id(req.params.blogAppId);
-      res.render('blogApps/edit.ejs', {
-        blogApp: blogApp,
-      });
-    } catch (error) {
-      console.log(error);
-      res.redirect('/')
-    }
-  });
+// router.get('/:blogAppId/edit', async (req, res) => {
+//     try {
+//       const currentUser = await User.findById(req.session.user._id);
+//       const blogApp = currentUser.blogs.id(req.params.blogAppId);
+//       res.render('blogapp/edit.ejs', {
+//         blogApp: blogApp,
+//       });
+//     } catch (error) {
+//       console.log(error);
+//       res.redirect('/')
+//     }
+//   });
 
   router.put('/:blogAppId', async (req, res) => {
     try {
