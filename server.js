@@ -48,7 +48,6 @@ app.use(passToView);
 app.get('/', (req, res) => {
   if (req.session.user) {
   res.redirect(`/users/${req.session.user._id}/blogApp`);
-  console.log("nate:", req.session.user._id)
   }else{
     res.render('index.ejs') 
   }

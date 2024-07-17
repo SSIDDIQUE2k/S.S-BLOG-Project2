@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
         });
     } catch (error) {
         console.log(error);
-        res.redirect('/views/index.ejs');
+        res.redirect('/');
     }
 });
 
